@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Cairo',Tahoma,Arial,sans-serif;
+  background:#f7f8fc;
+  color:#20243a;
+}
+button,select{font:inherit}
+button{cursor:pointer;border:0}
+.topbar{
+  height:76px;background:#fff;display:flex;align-items:center;
+  justify-content:space-between;padding:0 6%;position:sticky;top:0;z-index:10;
+  box-shadow:0 2px 20px rgba(30,35,70,.06)
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{
+  width:44px;height:44px;border-radius:14px;display:grid;place-items:center;
+  background:#6c63ff;color:#fff;font-size:22px;font-weight:800
+}
+.brand strong{display:block;font-size:16px}
+.brand span{display:block;color:#8b8fa5;font-size:11px}
+nav{display:flex;gap:6px}
+nav button{background:transparent;color:#777b91;padding:10px 16px;border-radius:12px}
+nav button.active,nav button:hover{background:#eeedff;color:#5a52e8}
+
+main{max-width:1180px;margin:auto;padding:28px 22px 60px}
+.view{display:none}
+.view.active{display:block}
+
+.hero{
+  min-height:470px;border-radius:30px;padding:45px 6%;
+  display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:25px;
+  background:linear-gradient(135deg,#655cf6,#8b83ff);
+  color:#fff;overflow:hidden;position:relative
+}
+.hero:after{
+  content:"";position:absolute;width:360px;height:360px;border-radius:50%;
+  background:rgba(255,255,255,.08);left:-120px;bottom:-180px
+}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.5px;color:#7771ed}
+.hero .eyebrow{color:#dedcff}
+.hero h1{font-size:48px;line-height:1.25;margin:12px 0}
+.hero h1 em{font-style:normal;color:#ffe59b}
+.hero p{font-size:16px;line-height:2;max-width:520px;color:#f0efff}
+.hero-art{display:flex;justify-content:center;position:relative;z-index:1}
+.hero-art .hero-svg{width:min(100%,430px);height:auto;filter:drop-shadow(0 20px 25px rgba(25,20,90,.2))}
+
+.primary{
+  background:#655cf6;color:#fff;padding:12px 20px;border-radius:12px;font-weight:700;
+  box-shadow:0 8px 18px rgba(101,92,246,.2)
+}
+.hero .primary{background:#fff;color:#554de0}
+.big{padding:14px 24px;margin-top:8px}
+
+.section{padding-top:55px}
+.section-title{display:flex;justify-content:space-between;align-items:end}
+.section-title h2,.page-head h1{margin:4px 0 10px}
+.progress-text{font-weight:800;color:#655cf6}
+.progress{height:8px;background:#e9e9f2;border-radius:20px;margin:12px 0 25px;overflow:hidden}
+.progress div{height:100%;width:0;background:#655cf6;border-radius:20px;transition:.3s}
+
+.subject-grid,.lesson-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px
+}
+.subject,.lesson-card,.panel,.quizbox{
+  background:#fff;border:1px solid #ececf4;border-radius:20px;
+  padding:22px;box-shadow:0 8px 25px rgba(40,45,80,.04)
+}
+.subject{cursor:pointer;transition:.2s}
+.subject:hover,.lesson-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(40,45,80,.08)}
+.icon{font-size:32px;margin-bottom:12px}
+.subject h3,.lesson-card h3{margin:4px 0 8px;font-size:17px}
+.subject p,.lesson-card p{color:#7c8096;font-size:13px;line-height:1.8}
+.tag{
+  display:inline-block;background:#f0efff;color:#5b54dc;padding:5px 9px;
+  border-radius:8px;font-size:11px
+}
+.lesson-card button,.quiz-picker button,.activity button,.option{
+  margin-top:8px;padding:10px 13px;border-radius:10px;background:#f1f1f7;color:#45495e
+}
+.lesson-card .primary{margin-left:5px}
+
+.page-head{padding:25px 5px}
+.page-head h1{font-size:36px}
+.page-head p{color:#777b91}
+select{
+  background:#fff;border:1px solid #ddddeb;border-radius:12px;padding:11px 16px;
+  color:#44485b
+}
+
+.back{background:#fff;border:1px solid #e5e5ee;padding:10px 16px;border-radius:10px;margin-bottom:18px}
+.detail-head{
+  background:linear-gradient(135deg,#655cf6,#8d85ff);color:#fff;
+  border-radius:25px;padding:30px;margin-bottom:18px
+}
+.detail-head small{opacity:.8}
+.detail-head h2{font-size:30px;margin:8px 0}
+.detail-head p{line-height:1.9}
+.panel{margin:14px 0;line-height:1.9}
+.panel h3{margin-top:0}
+.panel li{margin:8px 0}
+.interactive{
+  background:#f0efff;border-radius:20px;padding:22px;margin:18px 0
+}
+.activity{display:flex;flex-wrap:wrap;gap:8px}
+.activity button{background:#fff;border:1px solid #deddf0}
+.quiz-picker{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.quiz-picker button{margin:0;background:#fff;border:1px solid #e1e1ec}
+.quizbox{max-width:720px;margin:auto}
+.quizbox h3{font-size:20px;line-height:1.8}
+.option{display:block;width:100%;text-align:right;border:1px solid #e5e5ef;background:#fafafe}
+.option:hover{background:#f0efff}
+.option.correct{background:#dff7e8;border-color:#52b978;color:#16713a}
+.option.wrong{background:#ffe3e3;border-color:#e36c6c;color:#9a2525}
+.option:disabled{cursor:default}
+#msg{font-weight:700;margin:15px 0}
+#next:disabled{opacity:.45;cursor:not-allowed}
+footer{text-align:center;padding:28px;color:#999db0;font-size:12px}
+
+@media(max-width:900px){
+  .subject-grid,.lesson-grid{grid-template-columns:repeat(2,1fr)}
+  .hero{grid-template-columns:1fr;text-align:center;padding:35px 25px}
+  .hero p{margin-left:auto;margin-right:auto}
+  .hero-art img{width:290px}
+}
+@media(max-width:600px){
+  .topbar{height:auto;min-height:72px;padding:10px 15px;gap:8px}
+  nav button{padding:8px 9px;font-size:12px}
+  .brand span{display:none}
+  .subject-grid,.lesson-grid{grid-template-columns:1fr}
+  .hero h1{font-size:35px}
+  main{padding:18px 13px 45px}
+}
+
+.student-card{width:min(100%,480px);background:#fff;color:#29235d;border-radius:25px;padding:24px;box-shadow:0 18px 35px rgba(25,20,90,.18)}.student-card h2{margin-top:0;color:#655cf6}.student-card>div{background:#f7f6ff;border:1px solid #ebe9ff;border-radius:14px;padding:12px;margin:9px 0;line-height:1.8}.student-card .tw{display:grid;grid-template-columns:1fr 1fr;gap:9px;background:transparent;border:0;padding:0}.student-card .tw span{background:#f7f6ff;border:1px solid #ebe9ff;border-radius:14px;padding:12px}@media(max-width:600px){.student-card{padding:18px}.student-card .tw{grid-template-columns:1fr}}

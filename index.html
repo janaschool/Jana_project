@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بوابة الصف التاسع</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">9</div>
+      <div>
+        <strong>بوابة الصف التاسع</strong>
+        <span>تعلم • تدرب • أنجز</span>
+      </div>
+    </div>
+    <nav>
+      <button data-view="home" class="active">الرئيسية</button>
+      <button data-view="lessons">الدروس</button>
+      <button data-view="quiz">الاختبارات</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="view active">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">منصة تعليمية للصف التاسع</span>
+          <h1>دراستك صارت<br><em>أسهل وأمتع.</em></h1>
+          <p>دروس مرتبة، أنشطة تفاعلية، واختبارات قصيرة تساعدك تراجعي مواد الصف التاسع بطريقة بسيطة.</p>
+          <button class="primary big" onclick="show('lessons')">ابدئي التعلم ←</button>
+        </div>
+        <div class="hero-art">
+<div class="student-card">
+<h2>معلومات المشروع</h2>
+<div><b>👩‍🎓 إعداد الطالبة</b><br>جنى نواف المواجره</div>
+<div><b>👩‍🏫 بإشراف المعلمة</b><br>فرح الشوابكة</div>
+<div><b>🏫 المدرسة</b><br>مدرسة ماعين الثانوية الشاملة للبنات</div>
+<div class="tw"><span><b>الصف</b><br>التاسع ب</span><span><b>المادة</b><br>المهارات الرقمية</span></div>
+</div></div></div>
+
+      <section class="section">
+        <div class="section-title">
+          <div>
+            <span class="eyebrow">المواد</span>
+            <h2>اختاري مادتك</h2>
+          </div>
+          <span id="progressText" class="progress-text">0%</span>
+        </div>
+        <div class="progress"><div id="progressBar"></div></div>
+        <div id="subjects" class="subject-grid"></div>
+      </section>
+    </section>
+
+    <section id="lessons" class="view">
+      <div class="page-head">
+        <span class="eyebrow">المحتوى الدراسي</span>
+        <h1>الدروس</h1>
+        <p>اختاري المادة ثم افتحي الدرس الذي تريدينه.</p>
+        <select id="filter">
+          <option value="all">كل المواد</option>
+        </select>
+      </div>
+      <div id="lessonGrid" class="lesson-grid"></div>
+    </section>
+
+    <section id="lesson" class="view">
+      <button class="back" onclick="show('lessons')">← العودة للدروس</button>
+      <div id="detail"></div>
+    </section>
+
+    <section id="quiz" class="view">
+      <div class="page-head">
+        <span class="eyebrow">تقييم سريع</span>
+        <h1>الاختبارات</h1>
+        <p>اختبري نفسك في أي مادة.</p>
+      </div>
+      <div id="quizPicker" class="quiz-picker"></div>
+      <div id="quizArea"></div>
+    </section>
+  </main>
+
+  <footer>بوابة الصف التاسع • بالتوفيق في دراستك 🌷</footer>
+  <script src="app.js"></script>
+</body>
+</html>
